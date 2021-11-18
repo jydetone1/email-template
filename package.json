@@ -1,4 +1,5 @@
 {
+  "homepage": "http://jydetone1.github.io/email-template",
   "name": "email-template",
   "version": "0.1.0",
   "private": true,
@@ -11,6 +12,7 @@
     "@testing-library/jest-dom": "^5.15.0",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
+    "axios": "^0.24.0",
     "install": "^0.13.0",
     "npm": "^8.1.3",
     "react": "^17.0.2",
@@ -42,5 +44,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^3.2.3"
   }
 }

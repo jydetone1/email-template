@@ -4,9 +4,9 @@ import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import Collapse from '@mui/material/Collapse';
-import SortIcon from '@mui/icons-material/Sort';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { Link as Scroll } from 'react-scroll';
+import MailOutlineOutlinedIcon from '@mui/icons-material/MailOutlineOutlined';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -45,13 +45,15 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '4rem',
   },
 }));
-export default function Header() {
+
+const Header = () => {
   const classes = useStyles();
   const [checked, setChecked] = useState(false);
 
   useEffect(() => {
     setChecked(true);
   }, []);
+
   return (
     <div className={classes.root} id='header'>
       <AppBar style={{ background: 'none' }} elevation={0}>
@@ -60,7 +62,7 @@ export default function Header() {
             Email<span className={classes.colorText}> Template</span>
           </h1>
           <IconButton>
-            <SortIcon className={classes.icon} />
+            <MailOutlineOutlinedIcon className={classes.icon} />
           </IconButton>
         </Toolbar>
       </AppBar>
@@ -72,7 +74,8 @@ export default function Header() {
       >
         <div className={classes.container}>
           <h1 className={classes.title}>
-            Welcome to <br />E<span className={classes.colorText}>mail.</span>
+            Welcome to <br />
+            Email<span className={classes.colorText}>Temp.</span>
           </h1>
           <Scroll to='go-to-email-template' smooth={true}>
             <IconButton>
@@ -83,4 +86,5 @@ export default function Header() {
       </Collapse>
     </div>
   );
-}
+};
+export default Header;
